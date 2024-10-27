@@ -1,0 +1,19 @@
+# File: .github/workflows/AnotherWorkflow.yml
+
+name: Use Reusable Docker Build Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-push:
+    runs-on: self-hosted
+    
+    steps:
+      - name: Call Docker Build reusable workflow
+        uses: https://github.com/muna1991/Docker-build-demo/.github/workflows/hello-world.yml  # Path to the reusable workflow
+        with:
+          image_name: ${{ vars.IMG_NAME }}  # Passing the environment variable to the reusable workflow
+          tag: ${{ secrets.TAG }}  # Passing the secret to the reusable workflow
