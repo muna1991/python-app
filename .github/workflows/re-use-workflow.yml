@@ -10,6 +10,6 @@ jobs:
     uses: muna1991/Docker-build-demo/.github/workflows/hello-world.yml@main  # Use the reusable workflow
     with:
       image_name: ${{ vars.IMAGE_NAME }}  # Pass the environment variable to the reusable workflow
-      tag: ${{ secrets.TAG }}             # Pass the secret to the reusable workflow
+      tag: ${{ vars.TAG }}             # Pass the secret to the reusable workflow
     # secrets:
     #   TAG: ${{ secrets.TAG }}             # Explicitly pass the secret to the reusable workflow
