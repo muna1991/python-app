@@ -13,3 +13,5 @@ jobs:
       tag: ${{ vars.TAG }}             # Pass the secret to the reusable workflow
     # secrets:
     #   TAG: ${{ secrets.TAG }}             # Explicitly pass the secret to the reusable workflow
+      custom_command: echo "hello world"
+
