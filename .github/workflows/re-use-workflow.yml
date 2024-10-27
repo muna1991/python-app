@@ -11,4 +11,4 @@ jobs:
     with:
       image_name: ${{ vars.IMAGE_NAME }}  # Use the environment variable
       tag: ${{ secrets.TAG }}  # Use the secret
-    runs-on: self-hosted  # Specify the runner
+    runs-on: self-hosted  # Specify the runn
